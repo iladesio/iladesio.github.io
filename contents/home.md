@@ -18,4 +18,4 @@ Bachelor's Degree, Computer Science, University of Salerno, 2019—2022.
 
 #### Research Interests
 
-Computer Vision applied to Computer Graphics, Extended Reality and AGIUNGI.
+Computer Vision applied to Computer Graphics, Extended Reality and Machine Learning .
