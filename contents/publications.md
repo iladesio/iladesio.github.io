@@ -29,7 +29,7 @@
     <div class="project-content">
         <h3><a href="https://github.com/iladesio/NLP_Videogame-Playability-Analysis">NLP Video Game Playability Analysis Based on Players’ Reviews</a></h3>
         <p><strong>Tech Stack:</strong> PySpark, NLTK, Pandas, Matplotlib</p>
-        <p>📌 📌 This project is inspired by the research paper: 
+        <p>📌 This project is inspired by the research paper: 
             <em>A Data-Driven Approach for Video Game Playability Analysis Based on Players’ Reviews</em>.  
             [<a href="https://dl.acm.org/doi/10.1145/3487922.3493793" target="_blank">Read the paper</a>]. It focuses on assessing video game playability through a data-driven methodology that leverages player reviews on Steam as the primary source of analysis. Using NLP and big data analysis techniques, it evaluates functionality, usability, and gameplay to provide an objective analysis of game quality and user experience, structured according to the Paavilainen framework, while developing custom metrics to score games to generate graphical representations of the results. </p>
     </div>

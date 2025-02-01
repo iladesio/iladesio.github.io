@@ -1,27 +1,31 @@
-<div class="connect-section">
-    <h3>✨ Connect with me! ✨</h3>
-    <a href="https://github.com/iladesio" target="_blank">
-        <img src="https://github.githubassets.com/favicons/favicon.svg" width="4%" alt="GitHub">
-    </a>
-    <a href="https://www.linkedin.com/in/ilaria-de-sio/?originalSubdomain=it" target="_blank">
-        <img src="https://static.licdn.com/aero-v1/sc/h/akt4ae504epesldzj74dzred8" width="4%" alt="LinkedIn">
-    </a>
-    <a href="https://discord.com/users/790478358814261272" target="_blank">
-        <img src="static\assets\img\Discordlogo.png" width="4%" alt="Discord">
-    </a>
-</div>
+# <h1 align="center">Hi 👋, I'm Ilaria De Sio</h1>
 
-I'm currently pursuing a Master's Degree in Computer Science, Sapienza University of Rome.
+## 🚀 About Me
 
-#### Email
+<h3 align="center">
+  Computer Science MSc Student 💻 | XR and AI addict 🧠 | Game Development & Interactive Technologies Aspiring Researcher 🎮  
+</h3>
 
-desio.2064970@studenti.uniroma1.it
+---
 
 #### Education
 
 Master's Degree, Computer Science, Sapienza University of Rome, 2022—2025 (expected March 2025).\
 Bachelor's Degree, Computer Science, University of Salerno, 2019—2022.
 
-#### Research Interests
+## 🌍 Connect with me
 
-Computer Vision applied to Computer Graphics, Extended Reality and Machine Learning .
+<p align="center">
+  <a href="https://www.linkedin.com/in/ilaria-de-sio/" target="blank">
+    <img src="https://skillicons.dev/icons?i=linkedin" width="40"/>
+  </a>
+  <a href="https://instagram.com/ilariadesio_" target="blank">
+    <img src="https://skillicons.dev/icons?i=instagram" width="40"/>
+  </a>
+  <a href="https://discord.gg/790478358814261272" target="blank">
+    <img src="https://skillicons.dev/icons?i=discord" width="40"/>
+  </a>
+  <a href="mailto:desio.2064970@studenti.uniroma1.it" target="blank">
+    <img src="https://skillicons.dev/icons?i=gmail" width="40"/>
+  </a>
+</p>
