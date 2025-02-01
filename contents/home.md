@@ -1,6 +1,6 @@
 #### 🚀 About Me
 
-Computer Science MSc Student 💻 | XR and AI addict 🧠 | Game Development & Interactive Technologies Aspiring Researcher 🎮
+Computer Science MSc Student 💻| XR and AI addict 🧠| Game Development & Interactive Technologies Aspiring Researcher 🎮
 
 ---
 
@@ -9,9 +9,10 @@ Computer Science MSc Student 💻 | XR and AI addict 🧠 | Game Development & I
 Master's Degree, Computer Science, Sapienza University of Rome, 2022—2025 (expected March 2025).\
 Bachelor's Degree, Computer Science, University of Salerno, 2019—2022.
 
+---
+
 #### 🌍 Connect with me
 
-<p align="center">
   <a href="https://www.linkedin.com/in/ilaria-de-sio/" target="blank">
     <img src="https://skillicons.dev/icons?i=linkedin" width="40"/>
   </a>
@@ -24,4 +25,3 @@ Bachelor's Degree, Computer Science, University of Salerno, 2019—2022.
   <a href="mailto:desio.2064970@studenti.uniroma1.it" target="blank">
     <img src="https://skillicons.dev/icons?i=gmail" width="40"/>
   </a>
-</p>
