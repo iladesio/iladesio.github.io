@@ -6,8 +6,18 @@ Computer Science MSc Student 💻| XR and AI addict 🧠| Game Development & Int
 
 #### Education
 
-Master's Degree, Computer Science, Sapienza University of Rome, 2022—2025 (expected March 2025).\
-Bachelor's Degree, Computer Science, University of Salerno, 2019—2022.
+- Master's Degree, Computer Science, Sapienza University of Rome, 2022—2025 (expected March 2025).\
+<p>
+    <strong>Thesis:</strong> Deployment of a real-time system for on-site smart operator based on an MR Headset, in collaboration with
+    <a href='https://www.thalesaleniaspace.com/en' target='_blank'><strong>Thales Alenia Space</strong></a> and 
+    <a href='https://visionlab.di.uniroma1.it/' target='_blank'><strong>VISIONLab</strong></a>.
+</p>
+
+- Bachelor's Degree, Computer Science, University of Salerno, 2019—2022.
+<p>
+    <strong>Thesis:</strong> Analysis of the potential and limitations of software solutions for markerless tracking in AR applications, in collaboration with
+    <a href='https://docenti.unisa.it/en/research/laboratories?id=138' target='_blank'><strong>CGLab</strong></a>.
+</p>
 
 ---
 
