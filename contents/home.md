@@ -1,4 +1,4 @@
-#### 🚀 About Me
+#### About Me
 
 Computer Science MSc Student 💻| XR and AI addict 🧠| Game Development & Interactive Technologies Aspiring Researcher 🎮
 
