@@ -1,6 +1,6 @@
 #### About Me
 
-Computer Science MSc Student 💻| XR and AI addict 🧠| Game Development & Interactive Technologies Aspiring Researcher 🎮
+Computer Science MSc Student 💻| XR and AI addict 🧠| Game Development & Interactive Technologies aspiring Researcher 🎮
 
 ---
 
