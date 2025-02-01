@@ -1,10 +1,6 @@
-# <h1 align="center">Hi 👋, I'm Ilaria De Sio</h1>
+#### 🚀 About Me
 
-## 🚀 About Me
-
-<h3 align="center">
-  Computer Science MSc Student 💻 | XR and AI addict 🧠 | Game Development & Interactive Technologies Aspiring Researcher 🎮  
-</h3>
+Computer Science MSc Student 💻 | XR and AI addict 🧠 | Game Development & Interactive Technologies Aspiring Researcher 🎮
 
 ---
 
@@ -13,7 +9,7 @@
 Master's Degree, Computer Science, Sapienza University of Rome, 2022—2025 (expected March 2025).\
 Bachelor's Degree, Computer Science, University of Salerno, 2019—2022.
 
-## 🌍 Connect with me
+#### 🌍 Connect with me
 
 <p align="center">
   <a href="https://www.linkedin.com/in/ilaria-de-sio/" target="blank">
