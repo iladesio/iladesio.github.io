@@ -11,7 +11,7 @@ Bachelor's Degree, Computer Science, University of Salerno, 2019—2022.
 
 ---
 
-#### 🌍 Connect with me
+#### Connect with me
 
   <a href="https://www.linkedin.com/in/ilaria-de-sio/" target="blank">
     <img src="https://skillicons.dev/icons?i=linkedin" width="40"/>
