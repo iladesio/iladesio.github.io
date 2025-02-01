@@ -13,7 +13,7 @@
     <div class="project-content">
         <h3><a href="https://github.com/iladesio/MMST-Multi-Modal_Sign_Language_Translator">MMST: Multimodal Sign Language Translator</a></h3>
         <p><strong>Tech Stack:</strong> Python, OpenAI API, React, Node.js</p>
-        <p>📌 MMST is a web application that enables translation between speech, text, and sign language (SL) across multiple languages. Utilizing deep learning models, it processes input in real time, providing accurate and efficient translations in the desired modality. Designed for deaf and hard-of-hearing individuals, interpreters, educators, and learners, MMST enhances accessibility and communication through advanced multimodal AI-driven translation.</p>
+        <p>📌 MMST is a web application that enables translation between speech, text, and sign language (SL) across multiple languages. Utilizing OpenAI models, it processes input in real time, providing accurate and efficient translations in the desired modality. Designed for deaf and hard-of-hearing individuals, interpreters, educators, and learners, MMST enhances accessibility and communication through advanced multimodal AI-driven translation.</p>
     </div>
 </div>
 
