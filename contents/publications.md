@@ -76,6 +76,14 @@
 
 <div class="project-card">
     <div class="project-content">
+        <h3><a href="https://github.com/SoundFlowProject/report/blob/main/Project_Cloud_Computing_Report.pdf">SoundFlow - AWS Cloud Computing Project</h3>
+        <p><strong>Tech Stack:</strong> Python, AWS, Spotify API, React </p>
+        <p>📌 SoundFlow is a cloud-powered music recommendation system that analyzes a text insert by the user to detect emotions and suggest the perfect Spotify track. By combining AWS services for auto-scaling and efficient machine learning model integration, it assigns an emotion score to the text and matches it with a relevant song, delivering a personalized and dynamic listening experience. </p>
+    </div>
+</div>
+
+<div class="project-card">
+    <div class="project-content">
         <h3><a href="https://github.com/iladesio/NA-sound-4Everybody">Immersed in the Sound of Space - NASA Space App Challenge 2023 🏆</a></h3>
         <p><strong>Tech Stack:</strong> Python, OpenCV, React, Color Thief</p>
         <p>📌 Immersed in the Sound of Space is an audiovisual project that uses computer vision and generative sound design to transform Hubble Space Telescope footage into an immersive sonic experience. By analyzing the dominant colors in each frame, the system generates a synchronized soundscape, dynamically linking visual data to audio. This fusion creates an accessible way to experience space through sound.</p>

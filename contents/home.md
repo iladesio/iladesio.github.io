@@ -6,7 +6,7 @@ Computer Science MSc Student 💻| XR and AI addict 🧠| Game Development & Int
 
 #### Education
 
-- Master's Degree, Computer Science, Sapienza University of Rome, 2022—2025 (expected March 2025).\
+- Master's Degree, Computer Science, Sapienza University of Rome, 2022—2025 (expected March 2025).
 <p>
     <strong>Thesis:</strong> Deployment of a real-time system for on-site smart operator based on an MR Headset, in collaboration with
     <a href='https://www.thalesaleniaspace.com/en' target='_blank'><strong>Thales Alenia Space</strong></a> and 
