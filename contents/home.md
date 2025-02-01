@@ -7,7 +7,7 @@
         <img src="https://static.licdn.com/aero-v1/sc/h/akt4ae504epesldzj74dzred8" width="4%" alt="LinkedIn">
     </a>
     <a href="https://discord.com/users/790478358814261272" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Discord_Logo.svg" width="4%" alt="Discord">
+        <img src="static\assets\img\Discordlogo.png" width="4%" alt="Discord">
     </a>
 </div>
 
