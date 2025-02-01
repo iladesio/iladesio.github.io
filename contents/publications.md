@@ -76,7 +76,7 @@
 
 <div class="project-card">
     <div class="project-content">
-        <h3><a href="https://github.com/SoundFlowProject/report/blob/main/Project_Cloud_Computing_Report.pdf">SoundFlow - AWS Cloud Computing Project</h3>
+        <h3><a href="https://github.com/SoundFlowProject/report/blob/main/Project_Cloud_Computing_Report.pdf">SoundFlow - AWS Cloud Computing Project</a></h3>
         <p><strong>Tech Stack:</strong> Python, AWS, Spotify API, React </p>
         <p>📌 SoundFlow is a cloud-powered music recommendation system that analyzes a text insert by the user to detect emotions and suggest the perfect Spotify track. By combining AWS services for auto-scaling and efficient machine learning model integration, it assigns an emotion score to the text and matches it with a relevant song, delivering a personalized and dynamic listening experience. </p>
     </div>
