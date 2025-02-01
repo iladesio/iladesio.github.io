@@ -1,9 +1,15 @@
-<a href="https://github.com/iladesio" target="_blank">
-  <img src="https://github.githubassets.com/favicons/favicon.svg" width='4%' alt="GitHub">
-</a>
-<a href="https://www.linkedin.com/in/ilaria-de-sio/?originalSubdomain=it" target="_blank">
-  <img src="https://static.licdn.com/aero-v1/sc/h/akt4ae504epesldzj74dzred8" width='4%' alt="LinkedIn">
-</a>
+<div class="connect-section">
+    <h3>✨ Connect with me! ✨</h3>
+    <a href="https://github.com/iladesio" target="_blank">
+        <img src="https://github.githubassets.com/favicons/favicon.svg" width="4%" alt="GitHub">
+    </a>
+    <a href="https://www.linkedin.com/in/ilaria-de-sio/?originalSubdomain=it" target="_blank">
+        <img src="https://static.licdn.com/aero-v1/sc/h/akt4ae504epesldzj74dzred8" width="4%" alt="LinkedIn">
+    </a>
+    <a href="https://discord.com/users/790478358814261272" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Discord_Logo.svg" width="4%" alt="Discord">
+    </a>
+</div>
 
 I'm currently pursuing a Master's Degree in Computer Science, Sapienza University of Rome.
 
