@@ -11,14 +11,6 @@
 
 <div class="project-card">
     <div class="project-content">
-        <h3>Karate VR - Meta Quest 3</h3>
-        <p><strong>Tech Stack:</strong> Python, Meta SDK, Unity, C#</p>
-        <p>📌 Karate VR aims to revolutionize karate training through a Virtual Reality platform. This game allows users to practice kumite defensive techniques and blocks with real-time feedback on their movements.</p>
-    </div>
-</div>
-
-<div class="project-card">
-    <div class="project-content">
         <h3><a href="https://github.com/iladesio/MMST-Multi-Modal_Sign_Language_Translator">MMST: Multimodal Sign Language Translator</a></h3>
         <p><strong>Tech Stack:</strong> Python, OpenAI API, React, Node.js</p>
         <p>📌 MMST is a web application that enables translation between speech, text, and sign language (SL) across multiple languages. Utilizing deep learning models, it processes input in real time, providing accurate and efficient translations in the desired modality. Designed for deaf and hard-of-hearing individuals, interpreters, educators, and learners, MMST enhances accessibility and communication through advanced multimodal AI-driven translation.</p>
@@ -27,17 +19,56 @@
 
 <div class="project-card">
     <div class="project-content">
-        <h3><a href="https://github.com/iladesio/PuzzleBlock-BlockchainProject-Server">PuzzleBlock</a></h3>
-        <p><strong>Tech Stack:</strong> Python, Unity, Solidity, C#, JavaScript</p>
-        <p>📌 PuzzleBlock is a decentralized game application (DApp) designed to showcase the fundamental aspects and potential of blockchain technology through engaging gameplay in Unity, based on Ethereum. Players progress through various levels with the opportunity to purchase Non-Fungible Tokens (NFTs), blending education with competition.</p>
+        <h3><a href="https://github.com/iladesio/Biometric-Systems-Project">Gait Recognition with Wii Balance Board</a></h3>
+        <p><strong>Tech Stack:</strong> Python, BrainBLOX</p>
+        <p>📌 This project explores the potential of affordable hardware for biometric recognition by developing a gait identification system using the Nintendo Wii Balance Board. By capturing balance and pressure data while a person walks, the system analyzes unique walking patterns. Initially started as a research initiative, it demonstrates how everyday devices can be leveraged for advanced security and accessibility applications.</p>
     </div>
 </div>
 
 <div class="project-card">
     <div class="project-content">
-        <h3><a href="https://github.com/iladesio/Biometric-Systems-Project">Gait Recognition with Wii Balance Board</a></h3>
-        <p><strong>Tech Stack:</strong> Python, BrainBLOX</p>
-        <p>📌 This project explores the potential of affordable hardware for biometric recognition by developing a gait identification system using the Nintendo Wii Balance Board. By capturing balance and pressure data while a person walks, the system analyzes unique walking patterns. Initially started as a research initiative, it demonstrates how everyday devices can be leveraged for advanced security and accessibility applications.</p>
+        <h3><a href="https://github.com/iladesio/NLP_Videogame-Playability-Analysis">NLP Video Game Playability Analysis Based on Players’ Reviews</a></h3>
+        <p><strong>Tech Stack:</strong> PySpark, NLTK, Pandas, Matplotlib</p>
+        <p>📌 This project is inspired by the research paper <a href="https://dl.acm.org/doi/10.1145/3487922.3493793" target="_blank"><em>A Data-Driven Approach for Video Game Playability Analysis Based on Players’ Reviews</em></a> by Xiaozhou Li, Zheying Zhang, and Kostas Stefanidis. It focuses on assessing video game playability through a data-driven methodology that leverages player reviews on Steam as the primary source of analysis. Using NLP and big data analysis techniques, it evaluates functionality, usability, and gameplay to provide an objective analysis of game quality and user experience, structured according to the Paavilainen framework, while developing custom metrics to score games to generate graphical representations of the results. </p>
+    </div>
+</div>
+
+<div class="project-card">
+    <div class="project-content">
+        <h3>
+            <a href="https://github.com/iladesio/DroNETworkSimulator">
+                DroNETworkSimulator - Autonomous Networking
+            </a>
+        </h3>
+        <p><strong>Tech Stack:</strong> Python, TensorFlow, Matplotlib</p>
+        <p>📌 This project is an optimized version of DroNET, a Python-based simulator designed for experimenting with routing algorithms and mobility models in unmanned aerial vehicle (UAV) networks.</p>
+        <p>The project is divided into two parts:
+            <ul>
+                <li><strong>Homework 1:</strong> Addressing a drone routing problem using Reinforcement Learning techniques.</li>
+                <li>
+                    <strong>Homework 2:</strong> Implementation based on the paper:  
+                    <em>Jianmin LIU, Qi WANG, Chentao HE, and Yongjun XU. Ardeep: Adaptive and Reliable 
+                    Routing Protocol for Mobile Robotic Networks with Deep Reinforcement Learning.</em>  
+                    [<a href="https://ieeexplore.ieee.org/document/9314848" target="_blank">Read the paper</a>]
+                </li>
+            </ul>
+        </p>
+    </div>
+</div>
+
+<div class="project-card">
+    <div class="project-content">
+        <h3>Karate VR - Meta Quest 3</h3>
+        <p><strong>Tech Stack:</strong> Python, Meta SDK, Unity, C#</p>
+        <p>📌 Karate VR aims to revolutionize karate training through a Virtual Reality platform. This game allows users to practice kumite defensive techniques and blocks with real-time feedback on their movements.</p>
+    </div>
+</div>
+
+<div class="project-card">
+    <div class="project-content">
+        <h3><a href="https://github.com/iladesio/PuzzleBlock-BlockchainProject-Server">PuzzleBlock</a></h3>
+        <p><strong>Tech Stack:</strong> Python, Unity, Solidity, C#, JavaScript</p>
+        <p>📌 PuzzleBlock is a decentralized game application (DApp) designed to showcase the fundamental aspects and potential of blockchain technology through engaging gameplay in Unity, based on Ethereum. Players progress through various levels with the opportunity to purchase Non-Fungible Tokens (NFTs), blending education with competition.</p>
     </div>
 </div>
 
