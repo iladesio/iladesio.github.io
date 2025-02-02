@@ -85,7 +85,7 @@
 <div class="project-card">
     <div class="project-content">
         <h3><a href="https://github.com/iladesio/NA-sound-4Everybody">Immersed in the Sound of Space - NASA Space App Challenge 2023 🏆</a></h3>
-        <p><strong>Tech Stack:</strong> Python, OpenCV, React, Color Thief</p>
+        <p><strong>Tech Stack:</strong> Python, OpenCV, React</p>
         <p>📌 Immersed in the Sound of Space is an audiovisual project that uses computer vision and generative sound design to transform Hubble Space Telescope footage into an immersive sonic experience. By analyzing the dominant colors in each frame, the system generates a synchronized soundscape, dynamically linking visual data to audio. This fusion creates an accessible way to experience space through sound.</p>
     </div>
 </div>
