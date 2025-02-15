@@ -32,6 +32,6 @@ Computer Science MSc Student 💻| XR and AI addict 🧠| Game Development & Int
   <a href="https://discord.gg/790478358814261272" target="blank">
     <img src="https://skillicons.dev/icons?i=discord" width="40"/>
   </a>
-  <a href="mailto:desio.2064970@studenti.uniroma1.it" target="blank">
+  <a href="mailto:ilaria.desio00@gmail.com" target="blank">
     <img src="https://skillicons.dev/icons?i=gmail" width="40"/>
   </a>
