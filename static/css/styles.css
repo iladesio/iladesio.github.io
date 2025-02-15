@@ -8273,7 +8273,7 @@ textarea.form-control-lg {
 }
 
 .rounded-circle {
-  border-radius: 100% !important;
+  border-radius: 50% !important;
 }
 
 .rounded-pill {
