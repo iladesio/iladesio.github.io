@@ -1,177 +1,750 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Academic Webpage" />
-    <meta name="author" content="senli1073" />
-    <title id="title"></title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ilaria De Sio — Computer Vision × Game Dev</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Syne:wght@600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
 
-    <!-- Icon -->
-    <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
+<!-- =================================================================== -->
+<!--  PORTFOLIO DATA  —  EDIT ONLY THIS BLOCK TO UPDATE THE WHOLE SITE   -->
+<!--  Modifica solo questo blocco: tutto il sito si aggiorna da solo.    -->
+<!-- =================================================================== -->
+<script id="portfolio-data" type="application/json">
+{
+  "identity": {
+    "name": "Ilaria De Sio",
+    "roles": ["Computer Vision Engineer", "Game Developer"],
+    "location": "IGDA Italy",
+    "status": "",
+    "tagline": ["I teach machines to ", "see", " and games to ", "feel", "."],
+    "subline": "AI & Computer Vision Engineer and Game Developer building the bridge between perception and play."
+  },
+  "about": {
+    "kicker": "About me",
+    "lead": "Since day one, my playground for innovation.",
+    "paragraphs": [
+      "From my Bachelor's at the University of Salerno to a Master's at Sapienza University of Rome, I've focused on the powerful intersection of AI, Computer Vision and Gaming.",
+      "At Technology Reply I bridge research and industry as an AI & Computer Vision Engineer, designing and deploying production-grade solutions from Deep Learning to Spatial Intelligence, and bringing these models to life inside advanced 3D applications and AR/VR headsets that turn complex AI into immersive industrial tools.",
+      "But I don't just write code, I build communities. I founded Coscienze, a student association now 1,000+ members strong, and I'm bridging the gap in Southern Italy's tech scene as founder of IGDA Italy chapter, while contributing to the gaming world as an Independent Game Developer."
+    ],
+    "highlights": [
+      { "k": "AI & Computer Vision Engineer", "v": "Technology Reply", "logo": "assets/reply-logo.png" },
+      { "k": "Founder Campania Chapter · 1,500+ members", "v": "IGDA Italy", "logo": "assets/igda-icon.png" },
+      { "k": "Independent", "v": "Game Developer", "logo": "", "icon": "gamepad" }
+    ]
+  },
+  "vision": {
+    "kicker": "My Vision",
+    "title": "Computer Vision as a game engine for intelligence.",
+    "body": "I work where two disciplines collide. From Computer Vision I bring real-time perception and Spatial Intelligence — systems that understand gesture, motion, scene and 3D space. From Game Development I bring interaction, feel and worlds that respond. Together they turn vision into a controller, a sense for AI agents, and a generator of playable, immersive space — the same intelligence I deploy into AR/VR headsets and 3D applications at industrial scale.",
+    "pillars": [
+      { "k": "01", "t": "Perception as input", "d": "Hand & body tracking turned into low-latency, controller-free game interaction." },
+      { "k": "02", "t": "Agents that see", "d": "Vision-based perception loops so AI agents reason about what's actually on screen." },
+      { "k": "03", "t": "Generative worlds", "d": "Image & diffusion models steering procedural level and asset generation." }
+    ]
+  },
+  "projects": [
+    {
+      "title": "PuzzleBlock",
+      "subtitle": "Blockchain Puzzle Serious Game",
+      "description": "A decentralized game application (DApp) built in Unity on Ethereum that showcases the fundamentals and potential of blockchain through engaging gameplay. Players progress through levels with the chance to purchase NFTs, blending education with competition.",
+      "tags": ["Unity", "Ethereum", "Solidity", "NFT", "DApp"],
+      "year": "",
+      "link": "#",
+      "linkLabel": "Details",
+      "accent": "cyan",
+      "img": "assets/puzzleblock-logo.png"
+    },
+    {
+      "title": "Real-time 6D Pose Estimation on Mixed Reality Headset",
+      "subtitle": "collab with Thales Alenia Space",
+      "description": "A Mixed Reality system for Smart Operators that assists the production process. By deploying PoET, a state-of-the-art 6D pose estimation model, it provides real-time object recognition and spatial tracking to minimize errors and optimize workflows in manufacturing and assembly environments.",
+      "tags": ["6D Pose", "PoET", "Mixed Reality", "Deep Learning", "Python"],
+      "year": "XR",
+      "link": "#",
+      "linkLabel": "Details",
+      "accent": "violet",
+      "img": "assets/pose6d-cover.png"
+    },
+    {
+      "title": "Karate VR",
+      "subtitle": "VR Karate Game on Meta Quest 3",
+      "description": "Step into the dojo in VR. Train kumite blocks and defensive techniques on Meta Quest 3 and get real-time feedback on every move — your headset becomes a sensei that reads your body and sharpens your form.",
+      "tags": ["Unity", "Meta Quest 3", "VR", "Motion Tracking", "C#"],
+      "year": "2025",
+      "link": "#",
+      "linkLabel": "Details",
+      "accent": "blue",
+      "img": "assets/karate-vr.png"
+    },
+    {
+      "title": "Gait Recognition with Wii Balance Board",
+      "subtitle": "Biometric System",
+      "description": "Can a €30 gaming peripheral recognise you by your walk? This research project turns the Nintendo Wii Balance Board into a biometric sensor: it captures balance and pressure data as a person walks and analyses their unique gait pattern — showing how everyday devices can power advanced security and accessibility.",
+      "tags": ["Python", "BrainBLOX", "Matplotlib", "Biometrics"],
+      "year": "Research",
+      "link": "#",
+      "linkLabel": "Details",
+      "accent": "cyan",
+      "img": "assets/gait-cover.png"
+    },
+    {
+      "title": "MMST",
+      "subtitle": "Multimodal Sign Language Translator",
+      "description": "A web app that translates between speech, text and sign language across multiple languages. Powered by OpenAI models, it processes input in real time and returns accurate translations in the modality you need, built to make communication accessible for deaf and hard-of-hearing people, interpreters, educators and learners.",
+      "tags": ["Python", "OpenAI API", "React", "Node.js"],
+      "year": "",
+      "link": "#",
+      "linkLabel": "Details",
+      "accent": "violet",
+      "img": "assets/mmst-logo.png",
+      "fit": "contain",
+      "imgBg": "radial-gradient(130% 130% at 50% 35%, #f5f8fc, #e4eaf2)"
+    }],
+  "events": {
+    "kicker": "Community & Events",
+    "title": "Where I organize, speak and show up.",
+    "items": [
+      { "role": "Organizer", "title": "IGDA Campania — Game Dev Meetups", "type": "Community", "place": "Campania, IT", "date": "2024 — now", "desc": "Founder and host of recurring meetups connecting Southern Italy's game developers, students and studios.", "href": "#", "img": "assets/igda-icon.png" },
+      { "role": "Organizer", "title": "Coscienze — Talks & Workshops", "type": "Student association", "place": "Salerno, IT", "date": "2021 — now", "desc": "Founder of a 1,000+ member association running talks, workshops and outreach on tech, gaming and representation.", "href": "#", "img": "" },
+      { "role": "Speaker", "title": "AI in Videogames Summer School", "type": "Summer School", "place": "—", "date": "2025", "desc": "Joining to push the synergy between computer vision, AI agents and game development.", "href": "#", "img": "" },
+      { "role": "Attendee", "title": "Add your conferences & game jams", "type": "Conference / Jam", "place": "Italy / EU", "date": "2024", "desc": "Placeholder — list the events, talks and jams you attend or contribute to.", "href": "#", "img": "" }
+    ]
+  },
+  "skills": [
+    {
+      "title": "Computer Vision & AI",
+      "items": ["Real-time object detection", "6D Pose Estimation", "Synthetic Data Generation", "Diffusion & Generative models", "Deep Learning", "Edge AI & Embedded Vision"]
+    },
+    {
+      "title": "Game Development",
+      "items": ["Unity", "Godot", "Gameplay programming", "Unity ML-Agents & Plugins", "Procedural generation", "Shaders & VFX"]
+    },
+    {
+      "title": "Core Tools & Languages",
+      "items": ["Python", "C#", "C++", "PyTorch", "OpenCV", "Git & CI"]
+    }
+  ],
+  "awards": {
+    "kicker": "Awards & Recognition",
+    "title": "Recognized work.",
+    "items": [
+      { "title": "Best Case Study Award", "event": "BESTech Rome — Reply", "issuer": "Reply", "date": "Nov 2023", "href": "#", "img": "assets/reply-logo.png" },
+      { "title": "Social Hackademy Special Award", "event": "NASA Space Apps Challenge 2023", "issuer": "EGInA – European Grants International Academy & NASA Space Apps Rome", "date": "Oct 2023", "href": "#", "img": "assets/nasa-logo.png" }
+    ]
+  },
+  "contact": {
+    "kicker": "Let's connect",
+    "title": "Looking for the place where vision meets play.",
+    "body": "",
+    "links": [
+      { "label": "LinkedIn", "handle": "linkedin.com/in/ilaria-de-sio", "href": "https://www.linkedin.com/in/ilaria-de-sio/" },
+      { "label": "Email", "handle": "ilaria.desio00@gmail.com", "href": "mailto:ilaria.desio00@gmail.com" }
+    ]
+  }
+}
+</script>
 
-    <!-- Bootstrap icons-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="image-slot.js"></script>
+<script src="events.js"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['"Space Grotesk"', 'sans-serif'],
+          sans: ['Sora', 'sans-serif'],
+          mono: ['"JetBrains Mono"', 'monospace']
+        }
+      }
+    }
+  };
+</script>
+<style>
+  :root {
+    --bg: #08070c;
+    --bg-2: #0e0b15;
+    --panel: rgba(255,255,255,0.035);
+    --panel-strong: rgba(255,255,255,0.06);
+    --border: rgba(148,163,184,0.14);
+    --border-bright: rgba(148,163,184,0.28);
+    --text: #e8edf5;
+    --muted: #9aa7ba;
+    --dim: #5b6678;
+    --cyan: #34d8ee;
+    --violet: #b07cff;
+    --blue: #5b9dff;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Sora', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  /* ---- Aurora Mesh animated background ---- */
+  #bg-mesh { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+  #bg-mesh .blob { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.55; will-change: transform; }
+  #bg-mesh .b1 { width: 48vw; height: 48vw; background: #b07cff; left: -10vw; top: -12vw; animation: meshDrift1 13s ease-in-out infinite; }
+  #bg-mesh .b2 { width: 44vw; height: 44vw; background: #34d8ee; right: -8vw; top: 8vh; animation: meshDrift2 15s ease-in-out infinite; }
+  #bg-mesh .b3 { width: 42vw; height: 42vw; background: #5b9dff; left: 30vw; bottom: -18vw; animation: meshDrift3 17s ease-in-out infinite; }
+  #bg-mesh .b4 { width: 32vw; height: 32vw; background: #b07cff; right: 14vw; bottom: 2vh; opacity: 0.4; animation: meshDrift4 19s ease-in-out infinite; }
+  @keyframes meshDrift1 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(16vw,12vh) scale(1.15)} }
+  @keyframes meshDrift2 { 0%,100%{transform:translate(0,0) scale(1.1)} 50%{transform:translate(-14vw,10vh) scale(0.9)} }
+  @keyframes meshDrift3 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(10vw,-12vh) scale(1.2)} }
+  @keyframes meshDrift4 { 0%,100%{transform:translate(0,0) scale(0.95)} 50%{transform:translate(-10vw,-8vh) scale(1.15)} }
+  #bg-grain { position: fixed; inset: 0; z-index: 1; pointer-events: none; backdrop-filter: blur(36px); -webkit-backdrop-filter: blur(36px); background: rgba(8,7,12,0.26); }
+  #bg-fx { position: fixed; inset: 0; z-index: 1; pointer-events: none; }
+  @media (prefers-reduced-motion: reduce) { #bg-mesh .blob { animation: none; } }
+  .vignette {
+    position: fixed; inset: 0; z-index: 1; pointer-events: none;
+    background:
+      radial-gradient(120% 80% at 50% -10%, rgba(176,124,255,0.10), transparent 55%),
+      linear-gradient(180deg, rgba(8,7,12,0) 55%, var(--bg) 100%);
+  }
+  .wrap { position: relative; z-index: 2; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  .display { font-family: 'Syne', sans-serif; }
+  .serif-em { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; letter-spacing: 0; }
 
-    <!-- Google fonts-->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap"
-        rel="stylesheet" />
+  .glass {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .grad-text {
+    background: linear-gradient(110deg, var(--cyan), var(--violet) 70%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+  }
+  .hairline { height:1px; background: linear-gradient(90deg, transparent, var(--border-bright), transparent); }
 
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link type="text/css" href="static/css/styles.css" rel="stylesheet" />
-    <link type="text/css" href="static/css/main.css" rel="stylesheet" />
+  /* reveal on scroll */
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity:1; transform:none; transition:none; } }
 
-    <!-- Bootstrap core JS-->
-    <script type="text/javascript" src="static/js/bootstrap.bundle.min.js"></script>
+  /* project card */
+  .pcard { position: relative; overflow: hidden; transition: transform .5s cubic-bezier(.2,.7,.2,1), border-color .5s, box-shadow .5s; }
+  .pcard:hover { transform: translateY(-6px); border-color: var(--border-bright); }
+  .pcard .glow { position:absolute; inset:-1px; border-radius: inherit; opacity:0; transition: opacity .5s; pointer-events:none; z-index:0; }
+  .pcard:hover .glow { opacity: .9; }
+  .pcard .thumb img, .pcard .thumb .ph { transition: transform .7s cubic-bezier(.2,.7,.2,1), filter .7s; }
+  .pcard:hover .thumb img, .pcard:hover .thumb .ph { transform: scale(1.06); }
 
-    <!-- For Compatability -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    
-    <!-- Markdown -->
-    <script type="text/javascript" src="static/js/marked.min.js"></script>
+  .chip { font-family:'JetBrains Mono', monospace; font-size: 11px; letter-spacing:.02em;
+    border:1px solid var(--border); color: var(--muted); padding: 4px 9px; border-radius: 999px; background: rgba(255,255,255,0.02); }
 
-    <!-- Mathematics -->
-    <script>
-        // See https://docs.mathjax.org/en/latest/index.html for more details.
-        MathJax = {
-            tex: {
-                packages: {},              // extensions to use
-                inlineMath: [              // start/end delimiter pairs for in-line math
-                    ['$', '$'],
-                    ['\\(', '\\)']
-                ],
-                displayMath: [             // start/end delimiter pairs for display math
-                    ['$$', '$$'],
-                    ['\\[', '\\]']
-                ],
-                processEscapes: false,      // use \$ to produce a literal dollar sign
-                processEnvironments: true, // process \begin{xxx}...\end{xxx} outside math mode
-                processRefs: true,         // process \ref{...} outside of math mode
-                digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)/,    // pattern for recognizing numbers
-                tags: 'all',              // or 'ams' or 'all'
-                tagSide: 'right',          // side for \tag macros
-                tagIndent: '0.8em',        // amount to indent tags
-                useLabelIds: true,         // use label name rather than tag for ids
-                maxMacros: 10000,          // maximum number of macro substitutions per expression
-                maxBuffer: 5 * 1024,       // maximum size for the internal TeX string (5K)
-                // baseURL:                   // URL for use with links to tags (when there is a <base> tag in effect)
-                // (document.getElementsByTagName('base').length === 0) ? '' : String(document.location).replace(/#.*$/, ''),
-                formatError:               // function called when TeX syntax errors occur
-                    (jax, err) => jax.formatError(err)
-            }
-        };
-    </script>
-    <script type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
-    <!-- Core JS-->
-    <script type="text/javascript" src="static/js/scripts.js"></script>
-    <script type="text/javascript" src="static/js/js-yaml.min.js"></script>
+  .ph-stripes {
+    background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.04) 0 10px, transparent 10px 20px);
+  }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: rgba(52,216,238,0.3); }
 
+  .nav-link { position: relative; }
+  .nav-link::after { content:''; position:absolute; left:0; bottom:-3px; height:1px; width:0; background: var(--cyan); transition: width .3s; }
+  .nav-link:hover::after { width:100%; }
+
+  .cta-btn { transition: transform .3s, box-shadow .3s; }
+  .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 40px -10px rgba(52,216,238,0.5); }
+
+  .ev-row:hover { background: rgba(255,255,255,0.02); }
+
+  /* event cards (image-top) */
+  .ev-card { overflow: visible; text-decoration: none; }
+  .ev-card .glow { inset: -1px; }
+
+  /* projects 3D coverflow carousel */
+  .cf-stage { position: relative; height: 660px; perspective: 2200px; perspective-origin: 50% 50%; overflow: hidden; touch-action: pan-y; cursor: grab; }
+  .cf-stage:active { cursor: grabbing; }
+  .cf-ring { position: absolute; inset: 0; transform-style: preserve-3d; }
+  .cf-card { position: absolute; left: 50%; top: 50%; width: min(360px, 84vw); transform-style: preserve-3d; transition: transform .65s cubic-bezier(.2,.75,.2,1), opacity .65s, box-shadow .65s; will-change: transform, opacity; backface-visibility: hidden; }
+  .cf-card .glow { opacity: 0 !important; }
+  .cf-card.is-active .glow { opacity: .9 !important; }
+  .cf-counter { position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%); font-size: 12px; color: var(--dim); z-index: 1200; letter-spacing: .08em; }
+  .car-btn { width: 44px; height: 44px; border-radius: 999px; border: 1px solid var(--border); background: rgba(255,255,255,0.03); color: var(--text); font-family: 'JetBrains Mono', monospace; font-size: 16px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; transition: border-color .3s, background .3s, transform .3s; }
+  .car-btn:hover { border-color: var(--border-bright); background: rgba(255,255,255,0.07); transform: translateY(-2px); }
+</style>
 </head>
+<body>
+<div id="bg-mesh"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="blob b4"></div></div>
+<div id="bg-grain"></div>
+<canvas id="bg-fx"></canvas>
+<div class="vignette"></div>
 
-<body id="page-top">
-    <!-- Navigation-->
-    <nav class="header navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
-        <div class="container px-5">
-            <a id="page-top-title" class="navbar-brand fw-bold" href="#page-top"></a>
-            <!-- <a href="#page-top"><img src="static/assets/img/CUMT_LOGO.svg" style="width: 11rem;"></a> -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                MENU
-                <i class="bi-list"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#page-top">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#publications">PROJECTS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#awards">CERTIFICATES & GRANTS</a>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
+<div class="wrap" style="font-family: Sora">
+  <!-- NAV -->
+  <header class="fixed top-0 inset-x-0 z-50" style="backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);background:rgba(8,7,12,0.45);border-bottom:1px solid var(--border)">
+    <nav class="max-w-6xl mx-auto px-6 md:px-8 h-16 flex items-center justify-between">
+      <a href="#top" class="display font-semibold tracking-tight text-[15px] flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full" style="background:linear-gradient(120deg,var(--cyan),var(--violet))"></span>
+        <span id="nav-name"></span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-[13px] text-[color:var(--muted)]">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#vision" class="nav-link">Vision</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#events" class="nav-link">Events</a>
+        <a href="#awards" class="nav-link">Awards</a>
+        <a href="#contact" class="nav-link mono text-[color:var(--text)] border border-[color:var(--border)] rounded-full px-4 py-1.5">Contact</a>
+      </div>
     </nav>
+  </header>
 
-    <!-- Top Section -->
-    <section class="top-section" style="background-image: url('static/assets/img/background.jpeg');">
-        <div class="top-section-content">
-            <div class="container px-5">
-                <h2 id="top-section-bg-text" class="text-white display-3 lh-1 font-alt"></h2>
-            </div>
+  <main id="top" class="max-w-6xl mx-auto px-6 md:px-8" style="font-family: system-ui">
+
+    <!-- HERO -->
+    <section class="min-h-[100svh] flex flex-col justify-center pt-24 pb-16">
+      <div class="reveal">
+        <div id="hero-status-row" class="mono text-[12px] text-[color:var(--muted)] flex items-center gap-3 mb-7">
+          <span class="inline-block w-1.5 h-1.5 rounded-full animate-pulse" style="background:var(--cyan)"></span>
+          <span id="hero-status"></span>
         </div>
+        <h1 id="hero-tagline" class="display font-bold tracking-tight leading-[0.98] text-[13vw] sm:text-[64px] md:text-[80px] lg:text-[92px] max-w-5xl">I teach machines to see and games to feel.</h1>
+        <p id="hero-subline" class="mt-8 max-w-2xl text-[17px] md:text-[19px] leading-relaxed text-[color:var(--muted)] font-light">AI &amp; Computer Vision Engineer and Game Developer building the bridge between perception and play</p>
+        <div class="mt-10 flex flex-wrap items-center gap-4">
+          <a href="#work" class="cta-btn mono text-[13px] font-medium rounded-full px-6 py-3 text-[#06080c]" style="background:linear-gradient(110deg,var(--cyan),var(--violet))">View work →</a>
+          <a href="#vision" class="glass nav-link mono text-[13px] rounded-full px-6 py-3 text-[color:var(--text)]">My vision</a>
+        </div>
+        <div id="hero-roles" class="mt-14 flex flex-wrap gap-x-8 gap-y-3 mono text-[12px] text-[color:var(--dim)]"></div>
+      </div>
     </section>
-    <!-- Top Section -->
 
-    <!-- Photo -->
-    <div class="container px-5">
-        <div id="avatar">
-            <img class="rounded-circle" src="static/assets/img/foto_de_sio.png">
+    <!-- ABOUT -->
+    <section id="about" class="py-24 md:py-32 scroll-mt-20">
+      <div class="reveal mono text-[12px] text-[color:var(--cyan)] mb-10" id="about-kicker" style="font-size: 16px"></div>
+      <div class="grid md:grid-cols-12 gap-10 md:gap-14 items-start">
+        <!-- Photo -->
+        <div class="reveal md:col-span-5">
+          <div class="relative">
+            <div class="absolute -inset-3 rounded-[26px] opacity-60 blur-2xl" style="background:radial-gradient(60% 60% at 30% 20%,rgba(52,216,238,0.22),transparent 70%),radial-gradient(60% 60% at 80% 90%,rgba(176,124,255,0.22),transparent 70%)"></div>
+            <image-slot id="ilaria-photo" class="relative block w-full" style="aspect-ratio:1/1;height:auto;border:1px solid var(--border);border-radius:20px;overflow:hidden" shape="rounded" radius="20" src="assets/ilaria.png" placeholder="Drop your photo here"></image-slot>
+          </div>
         </div>
-    </div>
-    <!-- Photo -->
-    
-    <!-- Home -->
-    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="home">
-        <div class="container px-5">
-            <header>
-                <h2 id="home-subtitle"> </h2>
-                <!-- <span class="bi bi-list"></span> -->
-            </header>
-            <div class="main-body" id="home-md"></div>
+        <!-- Bio -->
+        <div class="md:col-span-7">
+          <p id="about-lead" class="reveal display font-medium text-[24px] md:text-[30px] leading-[1.18] tracking-tight">Since day one, my playground for innovation.</p>
+          <div id="about-paras" class="reveal mt-7 space-y-5 text-[16px] md:text-[17px] leading-relaxed text-[color:var(--muted)] font-light"></div>
+          <a href="#contact" class="reveal cta-btn mono text-[13px] font-medium rounded-full px-6 py-3 inline-flex items-center gap-2 mt-9" style="background:linear-gradient(110deg,var(--cyan),var(--violet));color:#08070c">Get in touch <span>↓</span></a>
         </div>
+      </div>
+      <div id="about-highlights" class="reveal mt-14 grid grid-cols-2 lg:grid-cols-3 gap-px rounded-2xl overflow-hidden" style="background:var(--border)"></div>
     </section>
-    <!-- Home -->
 
-    <!-- Publications -->
-    <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="publications">
-        <div class="container px-5">
-            <header>
-                <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;PROJECTS</h2>
-            </header>
-            <div class="main-body" id="publications-md"></div>
-
-        </div>
+    <!-- VISION -->
+    <section id="vision" class="py-24 md:py-32 scroll-mt-20">
+      <div class="reveal mono text-[12px] text-[color:var(--cyan)] mb-5" id="vision-kicker" style="font-size:13px">My Vision</div>
+      <div class="grid md:grid-cols-12 gap-10 md:gap-12 items-start">
+        <h2 id="vision-title" class="reveal md:col-span-5 display font-semibold tracking-tight text-[30px] md:text-[40px] leading-[1.05]"></h2>
+        <p id="vision-body" class="reveal md:col-span-7 text-[16px] md:text-[18px] leading-relaxed text-[color:var(--muted)] font-light"></p>
+      </div>
+      <div id="vision-pillars" class="reveal mt-16 grid sm:grid-cols-3 gap-px rounded-2xl overflow-hidden glass" style="background:var(--border)"></div>
     </section>
-    <!-- Publications  -->
 
-    <!-- Awards -->
-    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="awards">
-        <div class="container px-5">
-            <header>
-                <h2 id="awards-subtitle"><i class="bi bi-award-fill"></i>CERTIFICATES & GRANTS</h2>
-            </header>
-            <div class="main-body" id="awards-md"></div>
-
+    <!-- WORK -->
+    <section id="work" class="py-24 md:py-28 scroll-mt-20">
+      <div class="reveal flex items-end justify-between mb-12 gap-6">
+        <div>
+          <div class="mono text-[12px] text-[color:var(--cyan)] mb-3" style="font-size:13px">Selected work</div>
+          <h2 class="display font-semibold tracking-tight text-[30px] md:text-[42px]">Projects at the intersection.</h2>
         </div>
+        <div class="flex items-center gap-3 shrink-0">
+          <span class="mono text-[12px] text-[color:var(--dim)] hidden md:block mr-1" id="work-count">
+</span>
+          <button id="prev-proj" class="car-btn" aria-label="Previous projects">←</button>
+          <button id="next-proj" class="car-btn" aria-label="Next projects">→</button>
+        </div>
+      </div>
+      <div class="reveal cf-stage" id="cf-stage">
+        <div id="projects" class="cf-ring"></div>
+        <div class="cf-counter mono" id="cf-counter">
+</div>
+      </div>
     </section>
-    <!-- Awards -->
 
+    <!-- SKILLS -->
+    <section id="skills" class="py-24 md:py-28 scroll-mt-20">
+      <div class="reveal mb-12">
+        <div class="mono text-[12px] text-[color:var(--cyan)] mb-3" style="font-size:13px">Skill matrix</div>
+        <h2 class="display font-semibold tracking-tight text-[30px] md:text-[42px]">Two disciplines, one toolkit.</h2>
+      </div>
+      <div id="skills-grid" class="grid md:grid-cols-3 gap-6"></div>
+    </section>
 
-    <!-- Footer-->
-    <footer class="bg-bottom text-center py-5">
-        <div class="container px-5">
-            <div class="text-white-50 small">
-                <div id="copyright-text" class="mb-2"></div>
-                <a id="github-link" href="https://github.com/iladesio">Github</a>
-                <span class="mx-1">&middot;</span>
-                <a id="license-link" href="https://github.com/iladesio/iladesio.github.io/blob/main/LICENSE">License</a>
-            </div>
+    <!-- EVENTS -->
+    <section id="events" class="py-24 md:py-28 scroll-mt-20">
+      <div class="reveal mb-12">
+        <div class="mono text-[12px] text-[color:var(--cyan)] mb-3" id="events-kicker" style="font-size:13px"></div>
+        <h2 id="events-title" class="display font-semibold tracking-tight text-[30px] md:text-[42px]"></h2>
+      </div>
+      <div id="events-grid" class="reveal grid sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+      <div class="reveal mt-12 flex justify-center">
+        <a href="Activities.html" class="cta-btn mono text-[13px] font-medium rounded-full px-7 py-3.5 inline-flex items-center gap-2" style="background:linear-gradient(110deg,var(--cyan),var(--violet));color:#06080c">All my activities →</a>
+      </div>
+    </section>
+
+    <!-- AWARDS -->
+    <section id="awards" class="py-24 md:py-28 scroll-mt-20">
+      <div class="reveal mb-12">
+        <div class="mono text-[12px] text-[color:var(--cyan)] mb-3" id="awards-kicker" style="font-size:13px"></div>
+        <h2 id="awards-title" class="display font-semibold tracking-tight text-[30px] md:text-[42px]"></h2>
+      </div>
+      <div id="awards-grid" class="reveal grid md:grid-cols-2 gap-6"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-24 md:py-32 scroll-mt-20">
+      <div class="reveal glass rounded-3xl p-8 md:p-14 relative overflow-hidden">
+        <div class="absolute -top-24 -right-24 w-72 h-72 rounded-full" style="background:radial-gradient(circle,rgba(176,124,255,0.18),transparent 70%)"></div>
+        <div class="absolute -bottom-24 -left-24 w-72 h-72 rounded-full" style="background:radial-gradient(circle,rgba(52,216,238,0.16),transparent 70%)"></div>
+        <div class="relative">
+          <div class="mono text-[12px] text-[color:var(--cyan)] mb-4" id="contact-kicker" style="font-size:13px">Let's connect</div>
+          <h2 id="contact-title" class="display font-semibold tracking-tight text-[30px] md:text-[46px] max-w-3xl leading-[1.05]"></h2>
+          <p id="contact-body" class="mt-6 max-w-2xl text-[16px] md:text-[18px] leading-relaxed text-[color:var(--muted)] font-light"></p>
+          <div id="contact-links" class="mt-10 grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto"></div>
         </div>
+      </div>
+    </section>
+
+    <footer class="pb-16 pt-4 flex flex-col sm:flex-row gap-3 items-center justify-between mono text-[11px] text-[color:var(--dim)]">
+      <span id="foot-name"></span>
+      <span>Computer Vision × Game Dev</span>
     </footer>
+  </main>
+</div>
 
+<script>
+(function () {
+  const DATA = JSON.parse(document.getElementById('portfolio-data').textContent);
+  const accentMap = {
+    cyan:   { c: 'var(--cyan)',   glow: 'rgba(52,216,238,0.55)',  soft: 'rgba(52,216,238,0.14)' },
+    violet: { c: 'var(--violet)', glow: 'rgba(176,124,255,0.55)', soft: 'rgba(176,124,255,0.14)' },
+    blue:   { c: 'var(--blue)',   glow: 'rgba(91,157,255,0.55)',  soft: 'rgba(91,157,255,0.14)' }
+  };
+  const esc = (s) => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+  // ---- Identity / Hero ----
+  const id = DATA.identity;
+  document.getElementById('nav-name').textContent = id.name;
+  document.getElementById('foot-name').textContent = '© ' + new Date().getFullYear() + ' ' + id.name;
+  if (id.status && id.status.trim()) { document.getElementById('hero-status').textContent = id.status; }
+  else { const r = document.getElementById('hero-status-row'); if (r) r.style.display = 'none'; }
+  document.getElementById('hero-subline').textContent = id.subline;
+  // tagline: odd indexes get gradient highlight
+  document.getElementById('hero-tagline').innerHTML = id.tagline.map((seg, i) =>
+    i % 2 === 1 ? '<span class="grad-text serif-em">' + esc(seg) + '</span>' : esc(seg)
+  ).join('');
+  document.getElementById('hero-roles').innerHTML = id.roles.map(r =>
+    '<span class="flex items-center gap-2"><span style="color:var(--cyan)">◆</span>' + esc(r) + '</span>'
+  ).join('') + '<span class="flex items-center gap-2"><span style="color:var(--violet)">◆</span>' + esc(id.location) + '</span>';
+
+  // ---- About ----
+  const ab = DATA.about;
+  document.getElementById('about-kicker').textContent = ab.kicker;
+  document.getElementById('about-lead').textContent = ab.lead;
+  document.getElementById('about-paras').innerHTML = ab.paragraphs.map(p => '<p>' + esc(p) + '</p>').join('');
+  document.getElementById('about-highlights').innerHTML = ab.highlights.map(h => {
+    const gamepad = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px"><path d="M6 11h4M8 9v4"/><line x1="15" y1="11" x2="15.01" y2="11"/><line x1="18" y1="13" x2="18.01" y2="13"/><path d="M17.32 5H6.68a4 4 0 0 0-3.96 3.44l-1.2 8.4A2.5 2.5 0 0 0 4 19.7a2.5 2.5 0 0 0 2.1-1.13L7.5 16.5h9l1.4 2.07A2.5 2.5 0 0 0 20 19.7a2.5 2.5 0 0 0 2.48-2.86l-1.2-8.4A4 4 0 0 0 17.32 5Z"/></svg>`;
+    let media;
+    if (h.logo) media = `<img src="${esc(h.logo)}" alt="${esc(h.v)}" class="w-full h-full object-contain" style="padding:6px">`;
+    else if (h.icon === 'gamepad') media = `<span style="color:var(--cyan)">${gamepad}</span>`;
+    else media = `<span class="display text-[15px] font-semibold" style="color:var(--muted)">${esc((h.v||'').trim().split(/\s+/).map(w=>w[0]).slice(0,2).join('').toUpperCase())}</span>`;
+    return `
+    <div class="p-6 flex items-center gap-4" style="background:rgba(255,255,255,0.05);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)">
+      <div class="shrink-0 inline-flex items-center justify-center rounded-xl overflow-hidden" style="width:46px;height:46px;background:rgba(255,255,255,0.04);border:1px solid var(--border)">${media}</div>
+      <div class="min-w-0">
+        <div class="mono text-[12px] text-[color:var(--cyan)] mb-1.5 leading-snug">${esc(h.k)}</div>
+        <div class="display text-[16px] font-medium tracking-tight">${esc(h.v)}</div>
+      </div>
+    </div>`;
+  }).join('');
+
+  // ---- Vision ----
+  const v = DATA.vision;
+  document.getElementById('vision-kicker').textContent = v.kicker;
+  document.getElementById('vision-title').textContent = v.title;
+  document.getElementById('vision-body').textContent = v.body;
+  document.getElementById('vision-pillars').innerHTML = v.pillars.map(p => `
+    <div class="p-7 md:p-8" style="background:var(--bg-2)">
+      <div class="mono text-[12px] text-[color:var(--dim)] mb-5">${esc(p.k)}</div>
+      <div class="display font-medium text-[18px] mb-2">${esc(p.t)}</div>
+      <div class="text-[14px] leading-relaxed text-[color:var(--muted)] font-light">${esc(p.d)}</div>
+    </div>`).join('');
+
+  // ---- Projects ----
+  document.getElementById('work-count').textContent = '[ ' + DATA.projects.length + ' projects ]';
+  document.getElementById('projects').innerHTML = DATA.projects.map((p, i) => {
+    const a = accentMap[p.accent] || accentMap.cyan;
+    return `
+    <article class="pcard cf-card glass rounded-2xl flex flex-col" style="border-radius:18px">
+      <div class="glow" style="box-shadow:0 0 0 1px ${a.glow}, 0 24px 60px -20px ${a.glow}; border-radius:18px"></div>
+      <div class="thumb relative m-2 rounded-2xl overflow-hidden" style="aspect-ratio:16/10; background:var(--bg-2)">
+        ${p.img
+          ? `<img src="${esc(p.img)}" alt="" class="absolute inset-0 w-full h-full" style="object-fit:${p.fit === 'contain' ? 'contain' : 'cover'};${p.fit === 'contain' ? 'padding:8%;' : ''}background:${p.imgBg ? esc(p.imgBg) : (p.fit === 'contain' ? 'radial-gradient(120% 120% at 50% 40%, #16121f, #0a0710)' : 'transparent')}">`
+          : `<div class="ph absolute inset-0 ph-stripes" style="background-color:${a.soft}"></div>
+        <div class="absolute inset-0" style="background:radial-gradient(120% 100% at 80% 0%, ${a.soft}, transparent 60%)"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <span class="mono text-[11px] text-[color:var(--dim)] px-3 py-1 rounded-full" style="background:rgba(7,10,16,0.5);border:1px solid var(--border)">drop: ${esc(p.title)} shot</span>
+        </div>`}
+        ${p.year ? `<div class="absolute top-3 left-3 mono text-[11px] px-2.5 py-1 rounded-full" style="background:rgba(7,10,16,0.55);border:1px solid var(--border);color:${a.c}">${esc(p.year)}</div>` : ''}
+      </div>
+      <div class="relative z-10 p-5 pt-3 flex flex-col flex-1">
+        <h3 class="display font-semibold text-[20px] tracking-tight">${esc(p.title)}</h3>
+        <div class="mono text-[12px] mt-1 mb-3" style="color:${a.c}">${esc(p.subtitle)}</div>
+        <p class="text-[14px] leading-relaxed text-[color:var(--muted)] font-light flex-1">${esc(p.description)}</p>
+        <div class="flex flex-wrap gap-2 mt-5">${p.tags.map(t => `<span class="chip">${esc(t)}</span>`).join('')}</div>
+        <a href="${esc(p.link)}" class="mt-6 inline-flex items-center gap-2 mono text-[13px] group" style="color:${a.c}">
+          ${esc(p.linkLabel)} <span style="transition:transform .3s" class="group-hover:translate-x-1">→</span>
+        </a>
+      </div>
+    </article>`;
+  }).join('');
+
+  // ---- Projects 3D coverflow carousel ----
+  (function () {
+    const ring = document.getElementById('projects');
+    const prev = document.getElementById('prev-proj');
+    const next = document.getElementById('next-proj');
+    const stage = document.getElementById('cf-stage');
+    const counter = document.getElementById('cf-counter');
+    const cards = Array.from(ring.children);
+    const n = cards.length;
+    let active = 0;
+
+    function layout() {
+      cards.forEach((card, i) => {
+        let off = i - active;
+        off = off - n * Math.round(off / n); // shortest signed distance on the ring
+        const x = off * 318;
+        const z = -Math.abs(off) * 120;
+        const ry = Math.max(-26, Math.min(26, -off * 20));
+        const sc = Math.max(0.85, 1 - Math.abs(off) * 0.06);
+        const op = off === 0 ? 1 : Math.max(0.4, 1 - Math.abs(off) * 0.28);
+        card.style.transform = `translate(-50%,-50%) translateX(${x}px) translateZ(${z}px) rotateY(${ry}deg) scale(${sc})`;
+        card.style.opacity = op;
+        card.style.zIndex = String(1000 - Math.round(Math.abs(off) * 10));
+        card.classList.toggle('is-active', off === 0);
+      });
+      if (counter) counter.textContent = String(active + 1).padStart(2, '0') + ' / ' + String(n).padStart(2, '0');
+    }
+    const go = (d) => { active = (active + d + n) % n; layout(); };
+    prev.addEventListener('click', () => go(-1));
+    next.addEventListener('click', () => go(1));
+
+    // click a side card to bring it to front (ignore clicks on its link)
+    cards.forEach((card, i) => {
+      card.addEventListener('click', (e) => {
+        if (card.classList.contains('is-active')) return;
+        if (e.target.closest('a')) return;
+        e.preventDefault();
+        active = i; layout();
+      });
+    });
+
+    // drag / swipe to spin
+    let down = false, sx = 0, moved = false;
+    stage.addEventListener('pointerdown', (e) => { down = true; sx = e.clientX; moved = false; });
+    window.addEventListener('pointermove', (e) => {
+      if (!down) return;
+      const dx = e.clientX - sx;
+      if (Math.abs(dx) > 70) { go(dx < 0 ? 1 : -1); sx = e.clientX; moved = true; }
+    });
+    window.addEventListener('pointerup', () => { down = false; });
+
+    // keyboard when section in view
+    window.addEventListener('keydown', (e) => {
+      const r = stage.getBoundingClientRect();
+      if (r.top > innerHeight || r.bottom < 0) return;
+      if (e.key === 'ArrowLeft') go(-1);
+      if (e.key === 'ArrowRight') go(1);
+    });
+
+    window.addEventListener('resize', layout);
+    layout();
+  })();
+
+  // ---- Skills ----
+  document.getElementById('skills-grid').innerHTML = DATA.skills.map((s, i) => {
+    const dot = [ 'var(--cyan)','var(--violet)','var(--blue)' ][i % 3];
+    return `
+    <div class="glass rounded-2xl p-7 reveal">
+      <div class="flex items-center gap-2.5 mb-6">
+        <span class="inline-block w-2 h-2 rounded-full" style="background:${dot}"></span>
+        <h3 class="display font-medium text-[16px] tracking-tight">${esc(s.title)}</h3>
+      </div>
+      <ul class="space-y-3">${s.items.map(it => `
+        <li class="flex items-start gap-3 text-[14px] text-[color:var(--muted)] font-light">
+          <span class="mono text-[11px] mt-0.5" style="color:${dot}">›</span>${esc(it)}
+        </li>`).join('')}</ul>
+    </div>`;
+  }).join('');
+
+  // ---- Awards ----
+  const aw = DATA.awards;
+  if (aw) {
+    document.getElementById('awards-kicker').textContent = aw.kicker;
+    document.getElementById('awards-title').textContent = aw.title;
+    document.getElementById('awards-grid').innerHTML = aw.items.map((a, i) => {
+      const ac = ['var(--cyan)', 'var(--violet)', 'var(--blue)'][i % 3];
+      const soft = ['rgba(52,216,238,0.14)', 'rgba(176,124,255,0.14)', 'rgba(91,157,255,0.14)'][i % 3];
+      const ext = a.href && a.href !== '#';
+      const initials = ((a.issuer || a.event || '').replace(/[^A-Za-z]/g, ' ').trim().split(/\s+/)[0] || '').slice(0, 2).toUpperCase();
+      const tile = a.img
+        ? `<img src="${esc(a.img)}" alt="" class="w-full h-full" style="object-fit:contain;padding:14%">`
+        : `<div class="w-full h-full ph-stripes flex items-center justify-center" style="background:${soft}"><span class="display font-semibold text-[18px]" style="color:${ac}">${esc(initials)}</span></div>`;
+      const Tag = ext ? 'a' : 'div';
+      const attrs = ext ? `href="${esc(a.href)}" target="_blank" rel="noopener"` : '';
+      return `
+      <${Tag} ${attrs} class="pcard glass rounded-2xl p-6 flex items-start gap-5 group" style="border-radius:18px">
+        <div class="shrink-0 rounded-xl overflow-hidden" style="width:60px;height:60px;border:1px solid var(--border)">${tile}</div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center gap-2 mono text-[11px]" style="color:${ac}">
+            <span style="font-size:13px">★</span><span class="text-[color:var(--dim)]">${esc(a.date)}</span>
+          </div>
+          <h3 class="display font-semibold text-[19px] leading-[1.15] tracking-tight mt-1.5">${esc(a.title)}</h3>
+          <div class="text-[14px] text-[color:var(--muted)] font-light mt-1">${esc(a.event)}</div>
+          <div class="mono text-[12px] text-[color:var(--muted)] mt-2 leading-relaxed">${esc(a.issuer)}</div>
+        </div>
+      </${Tag}>`;
+    }).join('');
+  }
+
+  // ---- Events (cards — data from events.js, newest first; show 3) ----
+  const ev = DATA.events;
+  document.getElementById('events-kicker').textContent = ev.kicker;
+  document.getElementById('events-title').textContent = ev.title;
+  const evItems = (window.EVENTS || []);
+  document.getElementById('events-grid').innerHTML = evItems.slice(0, 3).map(e => window.eventCardHTML(e, { clamp: 3 })).join('');
+
+  // ---- Contact ----
+  const c = DATA.contact;
+  document.getElementById('contact-kicker').textContent = c.kicker;
+  document.getElementById('contact-title').textContent = c.title;
+  const _cb = document.getElementById('contact-body');
+  if (c.body && c.body.trim()) { _cb.textContent = c.body; }
+  else { _cb.style.display = 'none'; }
+  document.getElementById('contact-links').innerHTML = c.links.map(l => {
+    const mail = /^mailto:/i.test(l.href);
+    const tgt = mail ? '' : ' target="_blank" rel="noopener"';
+    const isLi = /linkedin/i.test(l.label);
+    const icon = isLi
+      ? `<svg viewBox="0 0 24 24" fill="currentColor" style="width:20px;height:20px"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>`
+      : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7.5 8.5 6 8.5-6"/></svg>`;
+    const tint = isLi ? 'var(--cyan)' : 'var(--violet)';
+    const tintSoft = isLi ? 'rgba(52,216,238,0.12)' : 'rgba(176,124,255,0.12)';
+    return `
+    <a href="${esc(l.href)}"${tgt} class="ct-link glass rounded-2xl p-5 flex items-center gap-4 group" style="transition:transform .3s,border-color .3s" onmouseover="this.style.borderColor='var(--border-bright)'" onmouseout="this.style.borderColor='var(--border)'">
+      <span class="shrink-0 inline-flex items-center justify-center rounded-xl" style="width:46px;height:46px;background:${tintSoft};color:${tint}">${icon}</span>
+      <span class="min-w-0 flex-1">
+        <span class="mono text-[11px] text-[color:var(--dim)] block">${esc(l.label)}</span>
+        <span class="text-[15px] block truncate">${esc(l.handle)}</span>
+      </span>
+      <span style="color:${tint};transition:transform .3s" class="shrink-0 group-hover:translate-x-1">↗</span>
+    </a>`;
+  }).join('');
+
+  // ---- Reveal on scroll ----
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  // add reveal to dynamically created cards too
+  document.querySelectorAll('#projects > *').forEach((el, i) => { el.classList.add('reveal'); el.style.transitionDelay = (i * 90) + 'ms'; });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  // Robust fallback in case IntersectionObserver doesn't fire (some embeds):
+  function revealInView() {
+    document.querySelectorAll('.reveal:not(.in)').forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < innerHeight * 0.92 && r.bottom > 0) el.classList.add('in');
+    });
+  }
+  window.addEventListener('scroll', revealInView, { passive: true });
+  window.addEventListener('resize', revealInView);
+  window.addEventListener('load', revealInView);
+  revealInView();
+
+  // ---- Aurora mesh: subtle pointer parallax ----
+  const mesh = document.getElementById('bg-mesh');
+  if (mesh && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    let tx = 0, ty = 0, cx = 0, cy = 0;
+    window.addEventListener('pointermove', e => {
+      tx = (e.clientX / innerWidth - 0.5) * 40;
+      ty = (e.clientY / innerHeight - 0.5) * 40;
+    });
+    (function spin() {
+      cx += (tx - cx) * 0.05; cy += (ty - cy) * 0.05;
+      mesh.style.transform = `translate(${cx}px, ${cy}px)`;
+      requestAnimationFrame(spin);
+    })();
+  }
+
+  // ---- Floating luminous particles (interactive) ----
+  (function () {
+    const cv = document.getElementById('bg-fx');
+    if (!cv) return;
+    const ctx = cv.getContext('2d');
+    let W, H, dpr, ps = [], mx = -9999, my = -9999;
+    function build() {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = cv.width = Math.floor(innerWidth * dpr);
+      H = cv.height = Math.floor(innerHeight * dpr);
+      cv.style.width = innerWidth + 'px';
+      cv.style.height = innerHeight + 'px';
+      const n = Math.round(innerWidth * innerHeight / 16000);
+      ps = [];
+      for (let i = 0; i < n; i++) {
+        ps.push({
+          x: Math.random() * W, y: Math.random() * H,
+          vx: (Math.random() - 0.5) * 0.25 * dpr,
+          vy: (-0.15 - Math.random() * 0.4) * dpr,
+          r: (0.8 + Math.random() * 1.8) * dpr,
+          hue: Math.random() < 0.5 ? '52,216,238' : '176,124,255',
+          tw: Math.random() * Math.PI * 2
+        });
+      }
+    }
+    function frame() {
+      ctx.clearRect(0, 0, W, H);
+      const R = 150 * dpr, mxp = mx * dpr, myp = my * dpr;
+      for (const p of ps) {
+        p.x += p.vx; p.y += p.vy; p.tw += 0.03;
+        // gentle cursor attraction
+        const dx = mxp - p.x, dy = myp - p.y, d = Math.hypot(dx, dy);
+        if (d < R) { p.x += dx / d * 0.5 * dpr; p.y += dy / d * 0.5 * dpr; }
+        if (p.y < -10) { p.y = H + 10; p.x = Math.random() * W; }
+        if (p.x < -10) p.x = W + 10; if (p.x > W + 10) p.x = -10;
+        const near = d < R ? (1 - d / R) : 0;
+        const a = (0.18 + Math.sin(p.tw) * 0.12) + near * 0.55;
+        const rr = p.r * (1 + near * 1.1);
+        ctx.beginPath();
+        ctx.fillStyle = `rgba(${p.hue},${Math.max(0.05, a)})`;
+        ctx.arc(p.x, p.y, rr, 0, 6.283);
+        ctx.fill();
+      }
+    }
+    window.addEventListener('pointermove', e => { mx = e.clientX; my = e.clientY; });
+    window.addEventListener('pointerleave', () => { mx = -9999; my = -9999; });
+    window.addEventListener('resize', build);
+    build();
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      (function loop() { frame(); requestAnimationFrame(loop); })();
+    } else { frame(); }
+  })();
+})();
+</script>
 </body>
-
 </html>
+
+<style id="__om-edit-overrides">
+#hero-roles >span:nth-child(1) { font-family: Sora !important }
+#hero-roles >span:nth-child(2) { font-family: Sora !important }
+#hero-roles >span:nth-child(3) { font-family: Sora !important }
+</style>

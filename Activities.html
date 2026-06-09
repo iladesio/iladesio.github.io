@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>All activities — Ilaria De Sio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Syne:wght@600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="events.js"></script>
+<script>
+  tailwind.config = { theme: { extend: { fontFamily: {
+    display: ['"Syne"', 'sans-serif'], sans: ['Sora', 'sans-serif'], mono: ['"JetBrains Mono"', 'monospace']
+  } } } };
+</script>
+<style>
+  :root {
+    --bg: #08070c; --bg-2: #0e0b15;
+    --panel: rgba(255,255,255,0.035); --border: rgba(148,163,184,0.14); --border-bright: rgba(148,163,184,0.28);
+    --text: #e8edf5; --muted: #9aa7ba; --dim: #5b6678;
+    --cyan: #34d8ee; --violet: #b07cff; --blue: #5b9dff;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: 'Sora', sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  .display { font-family: 'Syne', sans-serif; }
+  .serif-em { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; }
+
+  #bg-mesh { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+  #bg-mesh .blob { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.5; will-change: transform; }
+  #bg-mesh .b1 { width: 48vw; height: 48vw; background: #b07cff; left: -10vw; top: -12vw; animation: meshDrift1 13s ease-in-out infinite; }
+  #bg-mesh .b2 { width: 44vw; height: 44vw; background: #34d8ee; right: -8vw; top: 8vh; animation: meshDrift2 15s ease-in-out infinite; }
+  #bg-mesh .b3 { width: 42vw; height: 42vw; background: #5b9dff; left: 30vw; bottom: -18vw; animation: meshDrift3 17s ease-in-out infinite; }
+  @keyframes meshDrift1 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(16vw,12vh) scale(1.15)} }
+  @keyframes meshDrift2 { 0%,100%{transform:translate(0,0) scale(1.1)} 50%{transform:translate(-14vw,10vh) scale(0.9)} }
+  @keyframes meshDrift3 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(10vw,-12vh) scale(1.2)} }
+  #bg-grain { position: fixed; inset: 0; z-index: 1; pointer-events: none; backdrop-filter: blur(36px); -webkit-backdrop-filter: blur(36px); background: rgba(8,7,12,0.26); }
+  #bg-fx { position: fixed; inset: 0; z-index: 1; pointer-events: none; }
+  .vignette { position: fixed; inset: 0; z-index: 1; pointer-events: none; background: radial-gradient(120% 80% at 50% -10%, rgba(176,124,255,0.10), transparent 55%), linear-gradient(180deg, rgba(8,7,12,0) 60%, var(--bg) 100%); }
+  .wrap { position: relative; z-index: 2; }
+  @media (prefers-reduced-motion: reduce) { #bg-mesh .blob { animation: none; } }
+
+  .glass { background: var(--panel); border: 1px solid var(--border); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+  .grad-text { background: linear-gradient(110deg, var(--cyan), var(--violet) 70%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .ph-stripes { background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.05) 0 10px, transparent 10px 20px); }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: rgba(52,216,238,0.3); }
+  .nav-link { position: relative; }
+  .nav-link::after { content:''; position:absolute; left:0; bottom:-3px; height:1px; width:0; background: var(--cyan); transition: width .3s; }
+  .nav-link:hover::after { width:100%; }
+
+  /* cards */
+  .pcard { position: relative; transition: transform .5s cubic-bezier(.2,.7,.2,1), border-color .5s; }
+  .pcard:hover { transform: translateY(-6px); border-color: var(--border-bright); }
+  .pcard .glow { position:absolute; inset:-1px; border-radius: inherit; opacity:0; transition: opacity .5s; pointer-events:none; z-index:0; }
+  .pcard:hover .glow { opacity: .9; }
+  .pcard .thumb img, .pcard .thumb > div { transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+  .pcard:hover .thumb img, .pcard:hover .thumb > div { transform: scale(1.06); }
+  .ev-card { overflow: visible; }
+  .ev-card .thumb { overflow: hidden; }
+
+  .reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity:1; transform:none; transition:none; } }
+</style>
+</head>
+<body>
+<div id="bg-mesh"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+<div id="bg-grain"></div>
+<canvas id="bg-fx"></canvas>
+<div class="vignette"></div>
+
+<div class="wrap">
+  <header class="fixed top-0 inset-x-0 z-50" style="backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);background:rgba(8,7,12,0.45);border-bottom:1px solid var(--border)">
+    <nav class="max-w-6xl mx-auto px-6 md:px-8 h-16 flex items-center justify-between">
+      <a href="index.html#top" class="display font-semibold tracking-tight text-[15px] flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full" style="background:linear-gradient(120deg,var(--cyan),var(--violet))"></span>
+        Ilaria De Sio
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-[13px] text-[color:var(--muted)]">
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#vision" class="nav-link">Vision</a>
+        <a href="index.html#work" class="nav-link">Work</a>
+        <a href="index.html#skills" class="nav-link">Skills</a>
+        <a href="index.html#events" class="nav-link" style="color:var(--cyan)">Events</a>
+        <a href="index.html#contact" class="nav-link mono text-[color:var(--text)] border border-[color:var(--border)] rounded-full px-4 py-1.5">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 md:px-8 pt-32 md:pt-40 pb-24">
+    <div class="mb-4 mono text-[12px] flex items-center gap-2">
+      <a href="index.html#events" class="nav-link text-[color:var(--cyan)]">Events</a>
+      <span class="text-[color:var(--dim)]">/</span>
+      <span class="text-[color:var(--muted)]">All my activities</span>
+    </div>
+    <h1 class="display font-bold tracking-tight text-[44px] md:text-[68px] leading-[0.98] max-w-3xl">All my <span class="serif-em grad-text">activities</span>.</h1>
+    <div class="mt-6 flex flex-wrap items-center justify-between gap-x-8 gap-y-4">
+      <p class="max-w-xl text-[16px] md:text-[18px] leading-relaxed text-[color:var(--muted)] font-light">Talks, meetups and build communities together</p>
+      <a href="index.html#events" class="cta-btn mono text-[13px] font-medium rounded-full px-5 py-2.5 inline-flex items-center gap-2 shrink-0 ml-auto" style="border:1px solid var(--border);background:rgba(255,255,255,0.03);color:var(--text)"><span>←</span> Back</a>
+    </div>
+
+    <div id="all-events" class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </main>
+
+  <footer class="max-w-6xl mx-auto px-6 md:px-8 pb-16 mono text-[11px] text-[color:var(--dim)]">
+    © <span id="year"></span> Ilaria De Sio · Computer Vision × Game Dev
+  </footer>
+</div>
+
+<script>
+(function () {
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Render all events (newest first, as authored in events.js)
+  const grid = document.getElementById('all-events');
+  const items = (window.EVENTS || []);
+  grid.innerHTML = items.map(e => window.eventCardHTML(e, { clamp: 4 })).join('');
+  // stagger reveal
+  Array.from(grid.children).forEach((el, i) => {
+    el.classList.add('reveal');
+    el.style.transitionDelay = (Math.min(i, 8) * 80) + 'ms';
+  });
+
+  // reveal-on-scroll with robust fallback
+  const io = new IntersectionObserver((es) => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  function revealInView() {
+    document.querySelectorAll('.reveal:not(.in)').forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < innerHeight * 0.95 && r.bottom > 0) el.classList.add('in');
+    });
+  }
+  window.addEventListener('scroll', revealInView, { passive: true });
+  window.addEventListener('resize', revealInView);
+  window.addEventListener('load', revealInView);
+  revealInView();
+
+  // mesh parallax
+  const mesh = document.getElementById('bg-mesh');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (mesh && !reduce) {
+    let tx = 0, ty = 0, cx = 0, cy = 0;
+    window.addEventListener('pointermove', e => { tx = (e.clientX / innerWidth - 0.5) * 40; ty = (e.clientY / innerHeight - 0.5) * 40; });
+    (function spin() { cx += (tx - cx) * 0.05; cy += (ty - cy) * 0.05; mesh.style.transform = `translate(${cx}px,${cy}px)`; requestAnimationFrame(spin); })();
+  }
+
+  // floating particles
+  (function () {
+    const cv = document.getElementById('bg-fx'); if (!cv) return;
+    const ctx = cv.getContext('2d');
+    let W, H, dpr, ps = [], mx = -9999, my = -9999;
+    function build() {
+      dpr = Math.min(devicePixelRatio || 1, 2);
+      W = cv.width = Math.floor(innerWidth * dpr); H = cv.height = Math.floor(innerHeight * dpr);
+      cv.style.width = innerWidth + 'px'; cv.style.height = innerHeight + 'px';
+      const n = Math.round(innerWidth * innerHeight / 16000); ps = [];
+      for (let i = 0; i < n; i++) ps.push({ x: Math.random()*W, y: Math.random()*H, vx:(Math.random()-.5)*.25*dpr, vy:(-.15-Math.random()*.4)*dpr, r:(.8+Math.random()*1.8)*dpr, hue: Math.random()<.5?'52,216,238':'176,124,255', tw: Math.random()*6.28 });
+    }
+    function frame() {
+      ctx.clearRect(0,0,W,H); const R=150*dpr, mxp=mx*dpr, myp=my*dpr;
+      for (const p of ps) {
+        p.x+=p.vx; p.y+=p.vy; p.tw+=.03;
+        const dx=mxp-p.x, dy=myp-p.y, d=Math.hypot(dx,dy);
+        if (d<R){p.x+=dx/d*.5*dpr; p.y+=dy/d*.5*dpr;}
+        if (p.y<-10){p.y=H+10; p.x=Math.random()*W;}
+        if (p.x<-10) p.x=W+10; if (p.x>W+10) p.x=-10;
+        const near=d<R?(1-d/R):0; const a=(.18+Math.sin(p.tw)*.12)+near*.55; const rr=p.r*(1+near*1.1);
+        ctx.beginPath(); ctx.fillStyle=`rgba(${p.hue},${Math.max(.05,a)})`; ctx.arc(p.x,p.y,rr,0,6.283); ctx.fill();
+      }
+    }
+    window.addEventListener('pointermove', e=>{mx=e.clientX; my=e.clientY;});
+    window.addEventListener('pointerleave', ()=>{mx=-9999; my=-9999;});
+    window.addEventListener('resize', build); build();
+    if (!reduce) (function loop(){frame(); requestAnimationFrame(loop);})(); else frame();
+  })();
+})();
+</script>
+</body>
+</html>
