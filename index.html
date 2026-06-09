@@ -239,14 +239,11 @@
   .pcard:hover { transform: translateY(-6px); border-color: var(--border-bright); }
 
   /* vision pillars */
-  .vp-grid { display: flex; flex-direction: column; gap: 12px; }
-  @media (min-width: 860px) { .vp-grid { flex-direction: row; align-items: stretch; gap: 10px; } }
-  .vp-card { position: relative; flex: 1 1 0; overflow: hidden; transition: transform .45s cubic-bezier(.2,.7,.2,1), border-color .45s, box-shadow .45s; }
+  .vp-grid { display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch; gap: 12px; }
+  .vp-card { position: relative; flex: 1 1 240px; min-width: 240px; max-width: 380px; overflow: hidden; transition: transform .45s cubic-bezier(.2,.7,.2,1), border-color .45s, box-shadow .45s; }
   .vp-card:hover { transform: translateY(-5px); border-color: var(--border-bright) !important; box-shadow: 0 24px 50px -24px var(--vp-glow); }
   .vp-card .vp-halo { position: absolute; inset: 0; opacity: 0; transition: opacity .45s; pointer-events: none; background: radial-gradient(120% 120% at 80% 0%, var(--vp-soft), transparent 60%); }
   .vp-card:hover .vp-halo { opacity: 1; }
-  .vp-plus { display: flex; align-items: center; justify-content: center; color: var(--dim); font-family: 'JetBrains Mono', monospace; font-size: 22px; padding: 2px 0; }
-  @media (min-width: 860px) { .vp-plus { padding: 0 2px; } }
   .vp-synthesis { background: linear-gradient(110deg, rgba(52,216,238,0.07), rgba(176,124,255,0.09)); }
   .pcard .glow { position:absolute; inset:-1px; border-radius: inherit; opacity:0; transition: opacity .5s; pointer-events:none; z-index:0; }
   .pcard:hover .glow { opacity: .9; }
@@ -515,8 +512,7 @@ By merging Computer Vision and Game Development, I don't just build software but
         </div>
       </div>`;
     });
-    const plus = '<div class="vp-plus">+</div>';
-    const row = cards.join(plus);
+    const row = cards.join('');
     const synth = v.synthesis ? `
       <div class="vp-synthesis rounded-2xl mt-3 px-6 py-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-center" style="border:1px solid var(--border)">
         <span class="display text-[18px] md:text-[22px] font-medium tracking-tight">that become <span class="grad-text">${esc(v.synthesis)}</span></span>
