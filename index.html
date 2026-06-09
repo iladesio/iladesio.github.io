@@ -17,7 +17,7 @@
   "identity": {
     "name": "Ilaria De Sio",
     "roles": ["Computer Vision Engineer", "Game Developer"],
-    "location": "IGDA Italy Founder",
+    "location": "IGDA Italy",
     "status": "",
     "tagline": ["I teach machines to ", "see", " and games to ", "feel", "."],
     "subline": "AI & Computer Vision Engineer and Game Developer building the bridge between perception and play."
@@ -39,12 +39,13 @@
   "vision": {
     "kicker": "My Vision",
     "title": "Computer Vision as a game engine for intelligence.",
-    "body": "I work where two disciplines collide. From Computer Vision I bring real-time perception and Spatial Intelligence — systems that understand gesture, motion, scene and 3D space. From Game Development I bring interaction, feel and worlds that respond. Together they turn vision into a controller, a sense for AI agents, and a generator of playable, immersive space — the same intelligence I deploy into AR/VR headsets and 3D applications at industrial scale.",
+    "body": "I work where two disciplines collide. I have always believed that intelligence shouldn't just observe the world, and games shouldn't just simulate it. My journey started with a simple question: What happens when a game world can see you, and an AI can truly understand the space it inhabits?\nBy merging Computer Vision and Game Development, I don't just build software but experiences where digital and physical realities collapse into one another.",
     "pillars": [
-      { "k": "01", "t": "Perception as input", "d": "Hand & body tracking turned into low-latency, controller-free game interaction." },
-      { "k": "02", "t": "Agents that see", "d": "Vision-based perception loops so AI agents reason about what's actually on screen." },
-      { "k": "03", "t": "Generative worlds", "d": "Image & diffusion models steering procedural level and asset generation." }
-    ]
+      { "k": "01", "verb": "See", "t": "Perception as input", "d": "", "icon": "eye" },
+      { "k": "02", "verb": "Think", "t": "Agents that see", "d": "", "icon": "brain" },
+      { "k": "03", "verb": "Create", "t": "Generative worlds", "d": "", "icon": "spark" }
+    ],
+    "synthesis": "innovative, immersive experiences"
   },
   "projects": [
     {
@@ -125,7 +126,7 @@
     },
     {
       "title": "Core Tools & Languages",
-      "items": ["Python", "C#", "C++", "PyTorch", "OpenCV", "Git & CI"]
+      "items": ["Python", "C#, C, C++", "NVIDIA Omniverse", "PyTorch, TensorFlow", "OpenCV", "Git & CI"]
     }
   ],
   "awards": {
@@ -140,6 +141,7 @@
     "kicker": "Let's connect",
     "title": "Looking for the place where vision meets play.",
     "body": "",
+    "resume": "assets/resume.pdf",
     "links": [
       { "label": "LinkedIn", "handle": "linkedin.com/in/ilaria-de-sio", "href": "https://www.linkedin.com/in/ilaria-de-sio/" },
       { "label": "Email", "handle": "ilaria.desio00@gmail.com", "href": "mailto:ilaria.desio00@gmail.com" }
@@ -235,6 +237,17 @@
   /* project card */
   .pcard { position: relative; overflow: hidden; transition: transform .5s cubic-bezier(.2,.7,.2,1), border-color .5s, box-shadow .5s; }
   .pcard:hover { transform: translateY(-6px); border-color: var(--border-bright); }
+
+  /* vision pillars */
+  .vp-grid { display: flex; flex-direction: column; gap: 12px; }
+  @media (min-width: 860px) { .vp-grid { flex-direction: row; align-items: stretch; gap: 10px; } }
+  .vp-card { position: relative; flex: 1 1 0; overflow: hidden; transition: transform .45s cubic-bezier(.2,.7,.2,1), border-color .45s, box-shadow .45s; }
+  .vp-card:hover { transform: translateY(-5px); border-color: var(--border-bright) !important; box-shadow: 0 24px 50px -24px var(--vp-glow); }
+  .vp-card .vp-halo { position: absolute; inset: 0; opacity: 0; transition: opacity .45s; pointer-events: none; background: radial-gradient(120% 120% at 80% 0%, var(--vp-soft), transparent 60%); }
+  .vp-card:hover .vp-halo { opacity: 1; }
+  .vp-plus { display: flex; align-items: center; justify-content: center; color: var(--dim); font-family: 'JetBrains Mono', monospace; font-size: 22px; padding: 2px 0; }
+  @media (min-width: 860px) { .vp-plus { padding: 0 2px; } }
+  .vp-synthesis { background: linear-gradient(110deg, rgba(52,216,238,0.07), rgba(176,124,255,0.09)); }
   .pcard .glow { position:absolute; inset:-1px; border-radius: inherit; opacity:0; transition: opacity .5s; pointer-events:none; z-index:0; }
   .pcard:hover .glow { opacity: .9; }
   .pcard .thumb img, .pcard .thumb .ph { transition: transform .7s cubic-bezier(.2,.7,.2,1), filter .7s; }
@@ -337,7 +350,7 @@
           <a href="#contact" class="reveal cta-btn mono text-[13px] font-medium rounded-full px-6 py-3 inline-flex items-center gap-2 mt-9" style="background:linear-gradient(110deg,var(--cyan),var(--violet));color:#08070c">Get in touch <span>↓</span></a>
         </div>
       </div>
-      <div id="about-highlights" class="reveal mt-14 grid grid-cols-2 lg:grid-cols-3 gap-px rounded-2xl overflow-hidden" style="background:var(--border)"></div>
+      <div id="about-highlights" class="reveal mt-14 flex flex-wrap justify-center gap-3"></div>
     </section>
 
     <!-- VISION -->
@@ -345,9 +358,10 @@
       <div class="reveal mono text-[12px] text-[color:var(--cyan)] mb-5" id="vision-kicker" style="font-size:13px">My Vision</div>
       <div class="grid md:grid-cols-12 gap-10 md:gap-12 items-start">
         <h2 id="vision-title" class="reveal md:col-span-5 display font-semibold tracking-tight text-[30px] md:text-[40px] leading-[1.05]"></h2>
-        <p id="vision-body" class="reveal md:col-span-7 text-[16px] md:text-[18px] leading-relaxed text-[color:var(--muted)] font-light"></p>
+        <p id="vision-body" class="reveal md:col-span-7 text-[16px] md:text-[18px] leading-relaxed text-[color:var(--muted)] font-light">I work where two disciplines collide. I have always believed that intelligence shouldn't just observe the world, and games shouldn't just simulate it. My journey started with a simple question: What happens when a game world can see you, and an AI can truly understand the space it inhabits?
+By merging Computer Vision and Game Development, I don't just build software but experiences where digital and physical realities collapse into one another.</p>
       </div>
-      <div id="vision-pillars" class="reveal mt-16 grid sm:grid-cols-3 gap-px rounded-2xl overflow-hidden glass" style="background:var(--border)"></div>
+      <div id="vision-pillars" class="reveal mt-16"></div>
     </section>
 
     <!-- WORK -->
@@ -410,7 +424,8 @@
           <div class="mono text-[12px] text-[color:var(--cyan)] mb-4" id="contact-kicker" style="font-size:13px">Let's connect</div>
           <h2 id="contact-title" class="display font-semibold tracking-tight text-[30px] md:text-[46px] max-w-3xl leading-[1.05]"></h2>
           <p id="contact-body" class="mt-6 max-w-2xl text-[16px] md:text-[18px] leading-relaxed text-[color:var(--muted)] font-light"></p>
-          <div id="contact-links" class="mt-10 grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto"></div>
+          <div id="contact-links" class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto"></div>
+          <div id="contact-resume" class="mt-5 flex justify-center"></div>
         </div>
       </div>
     </section>
@@ -459,7 +474,7 @@
     else if (h.icon === 'gamepad') media = `<span style="color:var(--cyan)">${gamepad}</span>`;
     else media = `<span class="display text-[15px] font-semibold" style="color:var(--muted)">${esc((h.v||'').trim().split(/\s+/).map(w=>w[0]).slice(0,2).join('').toUpperCase())}</span>`;
     return `
-    <div class="p-6 flex items-center gap-4" style="background:rgba(255,255,255,0.05);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)">
+    <div class="p-6 flex items-center gap-4 rounded-2xl" style="flex:1 1 300px;min-width:258px;max-width:380px;background:rgba(255,255,255,0.04);border:1px solid var(--border);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)">
       <div class="shrink-0 inline-flex items-center justify-center rounded-xl overflow-hidden" style="width:46px;height:46px;background:rgba(255,255,255,0.04);border:1px solid var(--border)">${media}</div>
       <div class="min-w-0">
         <div class="mono text-[12px] text-[color:var(--cyan)] mb-1.5 leading-snug">${esc(h.k)}</div>
@@ -472,13 +487,42 @@
   const v = DATA.vision;
   document.getElementById('vision-kicker').textContent = v.kicker;
   document.getElementById('vision-title').textContent = v.title;
-  document.getElementById('vision-body').textContent = v.body;
-  document.getElementById('vision-pillars').innerHTML = v.pillars.map(p => `
-    <div class="p-7 md:p-8" style="background:var(--bg-2)">
-      <div class="mono text-[12px] text-[color:var(--dim)] mb-5">${esc(p.k)}</div>
-      <div class="display font-medium text-[18px] mb-2">${esc(p.t)}</div>
-      <div class="text-[14px] leading-relaxed text-[color:var(--muted)] font-light">${esc(p.d)}</div>
-    </div>`).join('');
+  document.getElementById('vision-body').innerHTML = '<span>' + esc(v.body).replace(/\n+/g, '</span><span class="block mt-4">') + '</span>';
+  document.getElementById('vision-pillars').innerHTML = (() => {
+    const tints = [
+      { c: 'var(--cyan)',   soft: 'rgba(52,216,238,0.16)',  glow: 'rgba(52,216,238,0.45)' },
+      { c: 'var(--blue)',   soft: 'rgba(91,157,255,0.16)',  glow: 'rgba(91,157,255,0.45)' },
+      { c: 'var(--violet)', soft: 'rgba(176,124,255,0.16)', glow: 'rgba(176,124,255,0.45)' }
+    ];
+    const icons = {
+      eye: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="width:21px;height:21px"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>',
+      brain: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="width:21px;height:21px"><circle cx="6" cy="7" r="2.3"/><circle cx="18" cy="7" r="2.3"/><circle cx="12" cy="17" r="2.3"/><path d="M8 8.2 10.6 15M16 8.2 13.4 15M8 7h8"/></svg>',
+      spark: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="width:21px;height:21px"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6.3 6.3l2.5 2.5M15.2 15.2l2.5 2.5M17.7 6.3l-2.5 2.5M8.8 15.2l-2.5 2.5"/></svg>'
+    };
+    const cards = v.pillars.map((p, i) => {
+      const t = tints[i % 3];
+      return `
+      <div class="vp-card glass rounded-2xl p-7" style="--vp-soft:${t.soft};--vp-glow:${t.glow};border:1px solid var(--border)">
+        <div class="vp-halo"></div>
+        <div class="relative z-10">
+          <div class="flex items-center justify-between mb-7">
+            <span class="inline-flex items-center justify-center rounded-xl" style="width:46px;height:46px;background:${t.soft};color:${t.c}">${icons[p.icon] || ''}</span>
+            <span class="mono text-[12px]" style="color:var(--dim)">${esc(p.k)}</span>
+          </div>
+          <div class="mono text-[11px] uppercase mb-2" style="color:${t.c};letter-spacing:.18em">${esc(p.verb || '')}</div>
+          <div class="display font-medium text-[19px] tracking-tight ${p.d && p.d.trim() ? 'mb-2' : ''}">${esc(p.t)}</div>
+          ${p.d && p.d.trim() ? `<div class="text-[14px] leading-relaxed text-[color:var(--muted)] font-light">${esc(p.d)}</div>` : ''}
+        </div>
+      </div>`;
+    });
+    const plus = '<div class="vp-plus">+</div>';
+    const row = cards.join(plus);
+    const synth = v.synthesis ? `
+      <div class="vp-synthesis rounded-2xl mt-3 px-6 py-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-center" style="border:1px solid var(--border)">
+        <span class="display text-[18px] md:text-[22px] font-medium tracking-tight">that become <span class="grad-text">${esc(v.synthesis)}</span></span>
+      </div>` : '';
+    return `<div class="vp-grid">${row}</div>${synth}`;
+  })();
 
   // ---- Projects ----
   document.getElementById('work-count').textContent = '[ ' + DATA.projects.length + ' projects ]';
@@ -651,6 +695,17 @@
       <span style="color:${tint};transition:transform .3s" class="shrink-0 group-hover:translate-x-1">↗</span>
     </a>`;
   }).join('');
+
+  // ---- Résumé download button ----
+  (function () {
+    const wrap = document.getElementById('contact-resume');
+    if (!wrap || !c.resume) return;
+    wrap.innerHTML = `
+      <a href="${esc(c.resume)}" download class="cta-btn mono text-[13px] font-medium rounded-full px-7 py-3 inline-flex items-center gap-2.5" style="background:linear-gradient(110deg,var(--cyan),var(--violet));color:#08070c">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:17px;height:17px"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M5 21h14"/></svg>
+        Download Resume
+      </a>`;
+  })();
 
   // ---- Reveal on scroll ----
   const io = new IntersectionObserver((entries) => {
